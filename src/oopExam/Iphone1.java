@@ -1,35 +1,104 @@
 package oopExam;
 
 /*
-1)  Can you make a relation of Iphone1 with Phone Interface and AppleWatch Abstract class. [Complete the code after answering above]. [points: 30] . 
-
+ * Iphone1 can inherit Applewatch because Applewatch is an abstract class by an extends keyword
+ * Then AppleWatch can inherit Phone by an implements keyword
  */
 
-public class Iphone1 {
+public class Iphone1 extends AppleWatch implements Phone {
 
-	/*2)
-	 * Assume 4 private variables here -- price (as int), Info (as String), user (as a char, M or F), madeInUSA (as boolean)
-	 * inside Iphone1 class. If the variables are private how can you use those
-	 * variable? What kind of concept you can use? use it just after the variables.
-	 * get the out come in TestPhone class. Complete this action and go to next.
-	 */
-	
-	/*
-	 * 3) Again, here in Iphone1, we got 4 private variables we know. Create 2
-	 * constructors inside it using that 4 private variables -- default and
-	 * parameterized after those variables (obviously before methods and after
-	 * variables), now go to Iphone2 class.
-	 */
-	
-	/*
-	 * 1)
-	 * Create a method - regularClassInfo and print out all the features of a
-	 * regular class compared with Interface and Abstract class you know.
-	 */
+	@Override
+	public void interfaceInfo() {
+		// TODO Auto-generated method stub
 
-	/*
-	 * Write a method inside them related to one of the features like youtube and
-	 * print out related info.
-	 */
+	}
 
+	@Override
+	public void call() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void message() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void camera() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void appleWatchInfo() {
+		// TODO Auto-generated method stub
+
+	}
+
+	private int price;
+	private String info;
+	private char user;
+	private boolean madeInUSA;
+
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
+	public String getInfo() {
+		return info;
+	}
+
+	public void setInfo(String info) {
+		this.info = info;
+	}
+
+	public char getUser() {
+		return user;
+	}
+
+	public void setUser(char user) {
+		this.user = user;
+	}
+
+	public boolean isMadeInUSA() {
+		return madeInUSA;
+	}
+
+	public void setMadeInUSA(boolean madeInUSA) {
+		this.madeInUSA = madeInUSA;
+	}
+
+	public Iphone1() {
+		this.price = 0;
+        this.info = "";
+        this.user = ' ';
+        this.madeInUSA = false;
+	}
+
+	public Iphone1(int price, String info, char user, boolean madeInUSA) {
+		super();
+		this.price = price;
+		this.info = info;
+		this.user = user;
+		this.madeInUSA = madeInUSA;
+	}
+
+	public void regularClassInfo() {
+		System.out.println("\nFeatures of a regular class:");
+		System.out.println("----------- Regular classes can have both abstract and non-abstract methods-----------");
+		System.out.println("----------- Regular classes can have constructors-----------");
+		System.out.println("----------- Regular classes can have instance variables with default values-----------");
+	}
+
+	public void youtube() {
+		System.out.println("\n-----------A regular class cannot inherit a regular class or abstract class by implements keyword-----------");
+		System.out.println("-----------An abstract class cannot inherit a regular class or abstract class by implements keyword-----------");
+
+	}
 }

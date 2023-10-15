@@ -1,27 +1,32 @@
 package oopExam;
 
 /*
- Points: 70
-
-1) What are the features of Interface you know? use multiple line comments here to describe it. you can use newline (\n) and tab(\t)
- 
-2) if Phone interface, inherit other Interface -- Pager and Wakitoki, use appropriate keywords to inherit them in line 11. if Phone interface can inherit regular class - LandPhone and one abstract class SatelitePhone, use appropriate keywords to inherit them. if not, then ignore it
+ *  Interface starts with Uppercase 
+ *  Interface is a blueprint of class
+ *  Interface cannot be instantiated 
+ *  Interface is a collection of methods that can be defined but not implemented
+ *  Contains only abstract methods 
  */
 
-public interface Phone {
+public interface Phone extends Pager, Wakitoki {
+	/*
+	 * An interface cannot declare a variable 
+	 * Also an Interface cannot have constructors
+	 */
 
-/*
- 3) Create a variable and a constructor if possible, if not possible to create variable and constructor, use multiple line comments with explanation
- */
-	
-	
-/*
-4) Create four abstract method interfaceInfo (created below), call, message and camera 
-*/
 	public void interfaceInfo();
-	
-/*
-5) Create 2 non-abstract method - battery and wireless which are implemented inside this interface. Inside sysout print example-- "battery is a --- method from Java --?--" and complete the wireless one
- */
 
+	public void call();
+
+	public void message();
+
+	public void camera();
+
+	public default void battery() {
+		System.out.println("battery is a default method from Java");
+	}
+
+	public default void wireless() {
+		System.out.println("wireless is a default method from Java");
+	}
 }

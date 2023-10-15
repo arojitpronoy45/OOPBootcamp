@@ -1,26 +1,45 @@
 package oopExam;
 
-/*
- NOW, Iphone1 came in 2000, but the new model Iphone2, Iphone3 came in 2001. 
- Assume Iphone1 is a superclass and Iphone2, Iphone3 is the child class of the Iphone1. Implement that here.
- */
+public class Iphone2 extends Iphone1 {
 
-public class Iphone2 {
-	
-	
-	/*1)
-	 *In IPhone2, Initialize a char variable
-	 * userOfIphone2 (M or F). create default and parameterized constructor, a void
-	 * type method iPhone2Info, a parameterized method with same name iPhone2Info
-	 * inside Iphone2 class. Use the super method and super keyword in constructor,
-	 * and super keyword in methods of Iphone2. Call constructor and methods. Can
-	 * you call variable by super keyword? create a public variable inside Iphone1
-	 * and execute it in Iphone2. Execute all of them in TestPhone. [points: 70]
-	 */
+	public char userOfIphone2 = 'M';
 
-	/*
-	 * Write a method inside them related to one of the features like dropbox and
-	 * print out related info.
-	 */
-	
+	public Iphone2() {
+
+		super.getPrice();
+		super.getInfo();
+		super.getUser();
+		super.isMadeInUSA();
+	}
+
+	public Iphone2(int price, String info, char user, boolean madeInUSA, char userOfIphone2) {
+
+		super(1500, "2023", 'M', false);
+		this.userOfIphone2 = 'M';
+
+		super.setPrice(1000);
+		super.setInfo("2023");
+		super.setUser(userOfIphone2);
+		super.setMadeInUSA((true));
+	}
+
+	public void Iphone2Info() {
+		System.out.println("\nIphone2 Info:");
+		System.out.println("\nUser of Iphone2: " + this.userOfIphone2);
+	}
+
+	public void Iphone2Info(char userofIphone2) {
+		super.setPrice(2000);
+		super.setInfo("2023");
+		super.setUser(userOfIphone2);
+		super.setMadeInUSA((true));
+		System.out.println("\nUse of Iphone2: " + this.userOfIphone2);
+	}
+
+	public void dropbox() {
+		System.out.println("\n-----------super method is used to call the constructor of super class-----------");
+		System.out.println("-----------Super keyword can call any types of method from super class-----------");
+		
+
+	}
 }
